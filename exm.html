@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Parsing Example</title>
+</head>
+<body>
+
+<div>
+    <h1>JSON Parsing Example</h1>
+    <p>Click the button to see the JSON values using alerts.</p>
+</div>
+
+<button onclick="showJSONValues()">Show JSON Values</button>
+
+<script>
+function showJSONValues() {
+    var jsonString = '{"name": "Peter", "age": 22, "country": "United States"}';
+
+    // Parsing the JSON string into a JavaScript object
+    var jsonObject = JSON.parse(jsonString);
+
+    // Displaying values using alerts
+    alert("Name: " + jsonObject.name + "\nAge: " + jsonObject.age + "\nCountry: " + jsonObject.country);
+}
+</script>
+
+</body>
+</html>
