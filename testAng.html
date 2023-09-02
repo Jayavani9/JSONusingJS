@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Angular JSON Data</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+  <div ng-repeat="person in jsonData">
+    <h2>Name: {{ person.name }}</h2>
+    <p>Language: {{ person.language }}</p>
+    <p>ID: {{ person.id }}</p>
+    <p>Bio: {{ person.bio }}</p>
+    <p>Version: {{ person.version }}</p>
+    <img ng-src="{{ person.img }}" alt="{{ person.name }}'s Image">
+    <hr> 
+  </div>
+
+  <script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", function($scope) {
+      $scope.jsonData = [
+        {
+          "name": "Adeel Solangi",
+          "language": "Sindhi",
+          "id": "V59OF92YF627HFY0",
+          "bio": "Donec lobortis eleifend condimentum. Cras dictum dolor lacinia lectus vehicula rutrum. Maecenas quis nisi nunc. Nam tristique feugiat est vitae mollis. Maecenas quis nisi nunc.",
+          "version": 6.1,
+          "img":"https://images.ctfassets.net/hrltx12pl8hq/3Z1N8LpxtXNQhBD5EnIg8X/975e2497dc598bb64fde390592ae1133/spring-images-min.jpg"
+
+        },
+        {
+                "name": "Afzal Ghaffar",
+                "language": "Sindhi",
+                "id": "ENTOCR13RSCLZ6KU",
+                "bio": "Aliquam sollicitudin ante ligula, eget malesuada nibh efficitur et. Pellentesque massa sem, scelerisque sit amet odio id, cursus tempor urna. Etiam congue dignissim volutpat. Vestibulum pharetra libero et velit gravida euismod.",
+                "version": 1.88,
+                "img":"https://images.ctfassets.net/hrltx12pl8hq/3Z1N8LpxtXNQhBD5EnIg8X/975e2497dc598bb64fde390592ae1133/spring-images-min.jpg"
+            },
+            {
+                "name": "Aamir Solangi",
+                "language": "Sindhi",
+                "id": "IAKPO3R4761JDRVG",
+                "bio": "Vestibulum pharetra libero et velit gravida euismod. Quisque mauris ligula, efficitur porttitor sodales ac, lacinia non ex. Fusce eu ultrices elit, vel posuere neque.",
+                "version": 7.27,
+                "img":"https://images.ctfassets.net/hrltx12pl8hq/3Z1N8LpxtXNQhBD5EnIg8X/975e2497dc598bb64fde390592ae1133/spring-images-min.jpg"
+            },
+            {
+                "name": "Abla Dilmurat",
+                "language": "Uyghur",
+                "id": "5ZVOEPMJUI4MB4EN",
+                "bio": "Donec lobortis eleifend condimentum. Morbi ac tellus erat.",
+                "version": 2.53,
+                "img":"https://images.ctfassets.net/hrltx12pl8hq/3Z1N8LpxtXNQhBD5EnIg8X/975e2497dc598bb64fde390592ae1133/spring-images-min.jpg"
+            },
+            {
+                "name": "Adil Eli",
+                "language": "Uyghur",
+                "id": "6VTI8X6LL0MMPJCC",
+                "bio": "Vivamus id faucibus velit, id posuere leo. Morbi vitae nisi lacinia, laoreet lorem nec, egestas orci. Suspendisse potenti.",
+                "version": 6.49,
+                "img":"https://images.ctfassets.net/hrltx12pl8hq/3Z1N8LpxtXNQhBD5EnIg8X/975e2497dc598bb64fde390592ae1133/spring-images-min.jpg"
+            },
+            {
+                "name": "Adile Qadir",
+                "language": "Uyghur",
+                "id": "F2KEU5L7EHYSYFTT",
+                "bio": "Duis commodo orci ut dolor iaculis facilisis. Morbi ultricies consequat ligula posuere eleifend. Aenean finibus in tortor vel aliquet. Fusce eu ultrices elit, vel posuere neque.",
+                "version": 1.9,
+                "img":"https://images.ctfassets.net/hrltx12pl8hq/3Z1N8LpxtXNQhBD5EnIg8X/975e2497dc598bb64fde390592ae1133/spring-images-min.jpg"
+            },
+            {
+                "name": "Abdukerim Ibrahim",
+                "language": "Uyghur",
+                "id": "LO6DVTZLRK68528I",
+                "bio": "Vivamus id faucibus velit, id posuere leo. Nunc aliquet sodales nunc a pulvinar. Nunc aliquet sodales nunc a pulvinar. Ut viverra quis eros eu tincidunt.",
+                "version": 5.9,
+                "img":"https://images.ctfassets.net/hrltx12pl8hq/3Z1N8LpxtXNQhBD5EnIg8X/975e2497dc598bb64fde390592ae1133/spring-images-min.jpg"
+            }
+        ];
+
+    });
+  </script>
+</body>
+
+</html>
